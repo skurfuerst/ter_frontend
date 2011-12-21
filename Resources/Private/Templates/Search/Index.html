@@ -1,0 +1,10 @@
+{namespace tf=Tx_TerFrontend_ViewHelpers}
+<f:form action="index">
+	<f:form.textfield name="queryString" />
+	<f:form.submit value="Search" />
+</f:form>
+<f:for each="{results}" as="result">
+	<h2>{result.packageName.value}</h2> {result.score.value}
+	<small>{result.package -> tf:fetch(p:'t3package:type')}</small>
+	<div class="updated">{result.updatedAt.value -> f:format.date()}</div>
+</f:for>

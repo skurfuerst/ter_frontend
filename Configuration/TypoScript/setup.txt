@@ -1,0 +1,30 @@
+plugin.tx_terfrontend {
+	view {
+		templateRootPath = {$plugin.tx_terfrontend.view.templateRootPath}
+		partialRootPath = {$plugin.tx_terfrontend.view.partialRootPath}
+		layoutRootPath = {$plugin.tx_terfrontend.view.layoutRootPath}
+	}
+	persistence {
+		storagePid = {$plugin.tx_terfrontend.persistence.storagePid}
+	}
+}
+
+plugin.tx_terfrontend._CSS_DEFAULT_STYLE (
+	input.f3-form-error {
+		background-color:#FF9F9F;
+		border: 1px #FF0000 solid;
+	}
+
+	.tx-ter-frontend table {
+		border-collapse:separate;
+		border-spacing:10px;
+	}
+
+	.tx-ter-frontend table th {
+		font-weight:bold;
+	}
+
+	.tx-ter-frontend table td {
+		vertical-align:top;
+	}
+)
